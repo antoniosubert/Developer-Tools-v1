@@ -9,21 +9,30 @@ export async function POST(request: Request) {
     }
 
     const startTime = Date.now();
-    const response = await fetch(url);
-    const endTime = Date.now();
 
-    if (!response.ok) {
+    try {
+      const response = await fetch(url, {
+        method: "HEAD",
+        cache: "no-store",
+      });
+
+      const endTime = Date.now();
+      const latency = endTime - startTime;
+
+      return NextResponse.json({
+        latency,
+        status: response.status,
+      });
+    } catch (error) {
       return NextResponse.json(
-        { error: "Failed to ping URL" },
-        { status: response.status }
+        { error: "Failed to reach the URL" },
+        { status: 500 }
       );
     }
-
-    return NextResponse.json({
-      latency: endTime - startTime,
-      status: response.status,
-    });
   } catch (error) {
-    return NextResponse.json({ error: "Failed to ping URL" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Invalid request format" },
+      { status: 400 }
+    );
   }
 }

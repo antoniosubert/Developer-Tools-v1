@@ -139,6 +139,34 @@ const tools: Tool[] = [
     path: "/tools/tip-calculator",
     category: "Finance",
   },
+  {
+    name: "Regex Tester",
+    description: "Test and validate regular expressions with live matching",
+    icon: "🔍",
+    path: "/tools/regex-tester",
+    category: "Development",
+  },
+  {
+    name: "Markdown Previewer",
+    description: "Preview and edit Markdown with live rendering",
+    icon: "📝",
+    path: "/tools/markdown-previewer",
+    category: "Text",
+  },
+  {
+    name: "JSON Formatter",
+    description: "Format and validate JSON with proper indentation",
+    icon: "🔧",
+    path: "/tools/json-formatter",
+    category: "Development",
+  },
+  {
+    name: "Client IP Lookup",
+    description: "Find your local IP address using WebRTC",
+    icon: "🌐",
+    path: "/tools/client-ip",
+    category: "Network",
+  },
 ];
 
 export function ToolsMenu() {
