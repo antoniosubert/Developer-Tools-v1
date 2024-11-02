@@ -22,6 +22,7 @@ const AgeCalculator: React.FC = () => {
     months: number;
     days: number;
   } | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const calculateAge = () => {
     if (!birthDate) return;
@@ -30,10 +31,12 @@ const AgeCalculator: React.FC = () => {
     const birth = birthDate.startOf("day");
 
     if (birth.isAfter(today)) {
+      setError("Birth date cannot be in the future");
       setAge(null);
       return;
     }
 
+    setError(null);
     let years = today.year() - birth.year();
     let months = today.month() - birth.month();
     let days = today.date() - birth.date();
@@ -66,10 +69,16 @@ const AgeCalculator: React.FC = () => {
                 <DatePicker
                   label="Date of Birth"
                   value={birthDate}
-                  onChange={(newValue) => setBirthDate(newValue)}
+                  onChange={(newValue) => {
+                    setBirthDate(newValue);
+                    setError(null);
+                  }}
+                  maxDate={dayjs()}
                   slotProps={{
                     textField: {
                       fullWidth: true,
+                      error: !!error,
+                      helperText: error,
                     },
                   }}
                 />
@@ -83,13 +92,12 @@ const AgeCalculator: React.FC = () => {
                 Calculate Age
               </Button>
 
-              {age && (
+              {age && !error && (
                 <div className="mt-6 p-4 bg-secondary rounded-lg">
                   <p className="text-center text-lg">
                     Age: {age.years} year{age.years !== 1 ? "s" : ""},{" "}
                     {age.months} month{age.months !== 1 ? "s" : ""}, and{" "}
-                    {age.days} day
-                    {age.days !== 1 ? "s" : ""}.
+                    {age.days} day{age.days !== 1 ? "s" : ""}.
                   </p>
                 </div>
               )}
