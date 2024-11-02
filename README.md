@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Tools Collection
+
+A comprehensive collection of web-based tools for developers, designers, and other professionals. Built with Next.js 14, TypeScript, and Tailwind CSS.
+
+## Features
+
+- 🛠️ **20+ Developer Tools** including:
+
+  - Network Tools (Ping Test, IP Lookup)
+  - Development Tools (JSON Formatter, Regex Tester, UUID Generator)
+  - Design Tools (Color Converters, Contrast Checker)
+  - Text Tools (Markdown Previewer, Base64 Encoder/Decoder)
+  - And many more...
+
+- 💻 **Modern Tech Stack**:
+
+  - Next.js 14 with App Router
+  - TypeScript for type safety
+  - Tailwind CSS for styling
+  - Shadcn/UI components
+
+- 🎨 **User Experience**:
+  - Clean, modern interface
+  - Dark mode support
+  - Responsive design
+  - Fast, client-side calculations
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   bash
+   git clone [your-repo-url]
+   cd [your-repo-name]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   bash
+   npm install
+   or
+   yarn install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run the development server:
+   bash
+   npm run dev
+   or
+   yarn dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+src/
+├── app/
+│ ├── api/ # API routes
+│ ├── tools/ # Tool pages
+│ └── page.tsx # Home page
+├── components/
+│ └── ui/ # Reusable UI components
+└── styles/ # Global styles
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Shadcn/UI](https://ui.shadcn.com/)
