@@ -60,6 +60,12 @@ const tools: Tool[] = [
     icon: "🎨",
     path: "/tools/color-contrast",
   },
+  {
+    name: "Ping Test URL",
+    description: "Test the latency of a URL with simple ping requests",
+    icon: "🌐",
+    path: "/tools/ping-test",
+  },
 ];
 
 export function ToolsMenu() {
