@@ -6,18 +6,18 @@ A comprehensive collection of web-based tools for developers, designers, and oth
 
 - 🛠️ **20+ Developer Tools** including:
 
-  - Network Tools (Ping Test, IP Lookup)
-  - Development Tools (JSON Formatter, Regex Tester, UUID Generator)
-  - Design Tools (Color Converters, Contrast Checker)
-  - Text Tools (Markdown Previewer, Base64 Encoder/Decoder)
-  - And many more...
+  - **Network Tools**: Ping Test, IP Lookup
+  - **Development Tools**: JSON Formatter, Regex Tester, UUID Generator
+  - **Design Tools**: Color Converters, Contrast Checker
+  - **Text Tools**: Markdown Previewer, Base64 Encoder/Decoder
+  - **And many more...**
 
 - 💻 **Modern Tech Stack**:
 
   - Next.js 14 with App Router
   - TypeScript for type safety
   - Tailwind CSS for styling
-  - Shadcn/UI components
+  - Shadcn/UI components for a polished interface
 
 - 🎨 **User Experience**:
   - Clean, modern interface
@@ -27,49 +27,77 @@ A comprehensive collection of web-based tools for developers, designers, and oth
 
 ## Getting Started
 
-1. Clone the repository:
-   bash
+To set up and run the project locally, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
    git clone [your-repo-url]
    cd [your-repo-name]
+   ```
 
-2. Install dependencies:
-   bash
+2. **Install dependencies**:
+
+   ```bash
    npm install
-   or
+   ```
+
+   or if you’re using Yarn:
+
+   ```bash
    yarn install
+   ```
 
-3. Run the development server:
-   bash
+3. **Run the development server**:
+
+   ```bash
    npm run dev
-   or
-   yarn dev
+   ```
 
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   or
+
+   ```bash
+   yarn dev
+   ```
+
+4. **Open your browser**:
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the app.
 
 ## Project Structure
 
+```
 src/
 ├── app/
-│ ├── api/ # API routes
-│ ├── tools/ # Tool pages
-│ └── page.tsx # Home page
+│   ├── api/       # API routes
+│   ├── tools/     # Tool pages
+│   └── page.tsx   # Home page
 ├── components/
-│ └── ui/ # Reusable UI components
-└── styles/ # Global styles
+│   └── ui/        # Reusable UI components
+└── styles/        # Global styles
+```
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! To contribute:
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. **Fork the repository**.
+2. **Create your feature branch**:
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your changes**:
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the branch**:
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
