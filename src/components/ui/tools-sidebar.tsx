@@ -3,11 +3,23 @@
 import Link from "next/link";
 import { tools } from "@/components/ui/tools-menu";
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./button";
 
 export function ToolsSidebar({ currentTool }: { currentTool: string }) {
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+
+  // Find the category of the current tool and expand it on mount or when currentTool changes
+  useEffect(() => {
+    const currentToolData = tools.find((tool) => tool.path === currentTool);
+    if (currentToolData) {
+      setExpandedCategories((prev) =>
+        prev.includes(currentToolData.category)
+          ? prev
+          : [...prev, currentToolData.category]
+      );
+    }
+  }, [currentTool]);
 
   const toggleCategory = (category: string) => {
     setExpandedCategories((prev) =>

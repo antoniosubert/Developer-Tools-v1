@@ -179,6 +179,13 @@ export const tools: Tool[] = [
     path: "/tools/what-week",
     category: "Date & Time",
   },
+  {
+    name: "Time Zone Converter",
+    description: "Convert times between different time zones",
+    icon: "🌍",
+    path: "/tools/time-zone-converter",
+    category: "Date & Time",
+  },
 ];
 
 // Get categories and their icons
