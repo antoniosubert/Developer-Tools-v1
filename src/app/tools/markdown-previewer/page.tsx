@@ -1,4 +1,4 @@
-import MarkdownPreviewer from "@/components/ui/markdown-previewer";
+import MarkdownPreviewer from "@/components/tools/formatters/markdown-previewer";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

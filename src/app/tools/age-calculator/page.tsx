@@ -1,4 +1,4 @@
-import AgeCalculator from "@/components/ui/age-calculator";
+import AgeCalculator from "@/components/tools/calculators/age-calculator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

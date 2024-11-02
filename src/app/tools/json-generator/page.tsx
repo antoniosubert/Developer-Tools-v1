@@ -1,4 +1,4 @@
-import JSONGenerator from "@/components/ui/json-generator";
+import JSONGenerator from "@/components/tools/generators/json-generator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

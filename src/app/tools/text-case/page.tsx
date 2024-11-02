@@ -1,4 +1,4 @@
-import TextCaseConverter from "@/components/ui/text-case-converter";
+import TextCaseConverter from "@/components/tools/converters/text-case-converter";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

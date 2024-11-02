@@ -1,4 +1,4 @@
-import UUIDGenerator from "@/components/ui/uuid-generator";
+import UUIDGenerator from "@/components/tools/generators/uuid-generator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

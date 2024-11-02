@@ -1,4 +1,4 @@
-import TipCalculator from "@/components/ui/tip-calculator";
+import TipCalculator from "@/components/tools/calculators/tip-calculator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

@@ -1,4 +1,4 @@
-import ColorContrastOptimizer from "@/components/ui/color-contrast-optimizer";
+import ColorContrastOptimizer from "@/components/tools/design/color-contrast";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

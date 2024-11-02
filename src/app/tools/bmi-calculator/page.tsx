@@ -1,4 +1,4 @@
-import BMICalculator from "@/components/ui/bmi-calculator";
+import BMICalculator from "@/components/tools/calculators/bmi-calculator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

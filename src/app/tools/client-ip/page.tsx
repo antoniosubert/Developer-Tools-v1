@@ -1,4 +1,4 @@
-import ClientIPLookup from "@/components/ui/client-ip-lookup";
+import ClientIPLookup from "@/components/tools/network/client-ip-lookup";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

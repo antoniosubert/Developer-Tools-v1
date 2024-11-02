@@ -1,4 +1,4 @@
-import QRCodeGenerator from "@/components/ui/qr-code-generator";
+import QRCodeGenerator from "@/components/tools/generators/qr-generator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

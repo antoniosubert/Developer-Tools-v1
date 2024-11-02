@@ -1,4 +1,4 @@
-import RGBToHexConverter from "@/components/ui/rgb-to-hex-converter";
+import RGBToHexConverter from "@/components/tools/design/rgb-to-hex";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

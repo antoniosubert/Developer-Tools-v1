@@ -1,4 +1,4 @@
-import UnitConverter from "@/components/ui/unit-converter";
+import UnitConverter from "@/components/tools/converters/unit-converter";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

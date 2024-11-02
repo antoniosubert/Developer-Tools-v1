@@ -1,4 +1,4 @@
-import Base64EncoderDecoder from "@/components/ui/base64-encoder-decoder";
+import Base64EncoderDecoder from "@/components/tools/converters/base64-converter";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

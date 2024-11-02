@@ -1,4 +1,4 @@
-import CookingMeasurementConverter from "@/components/ui/cooking-measurement-converter";
+import CookingMeasurementConverter from "@/components/tools/converters/cooking-converter";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

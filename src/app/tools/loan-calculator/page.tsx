@@ -1,4 +1,4 @@
-import LoanCalculator from "@/components/ui/loan-calculator";
+import LoanCalculator from "@/components/tools/calculators/loan-calculator";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

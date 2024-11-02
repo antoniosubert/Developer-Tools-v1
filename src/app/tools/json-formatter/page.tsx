@@ -1,4 +1,4 @@
-import JSONFormatter from "@/components/ui/json-formatter";
+import JSONFormatter from "@/components/tools/formatters/json-formatter";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

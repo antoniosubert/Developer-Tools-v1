@@ -1,4 +1,4 @@
-import RegexTester from "@/components/ui/regex-tester";
+import RegexTester from "@/components/tools/dev/regex-tester";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
