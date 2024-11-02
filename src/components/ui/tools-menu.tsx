@@ -14,7 +14,7 @@ interface ToolsMenuProps {
   onToggleCategory: (category: string) => void;
 }
 
-const tools: Tool[] = [
+export const tools: Tool[] = [
   {
     name: "RGB to HEX",
     description: "Convert RGB colors to hexadecimal format and vice versa",
@@ -171,6 +171,13 @@ const tools: Tool[] = [
     icon: "🌐",
     path: "/tools/client-ip",
     category: "Network",
+  },
+  {
+    name: "What Week?",
+    description: "Find out the current week number of the year",
+    icon: "📅",
+    path: "/tools/what-week",
+    category: "Date & Time",
   },
 ];
 
