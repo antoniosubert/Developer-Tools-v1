@@ -186,6 +186,13 @@ export const tools: Tool[] = [
     path: "/tools/time-zone-converter",
     category: "Date & Time",
   },
+  {
+    name: "API Request Builder",
+    description: "Build and test API requests with a visual interface",
+    icon: "🔌",
+    path: "/tools/api-request-builder",
+    category: "Development",
+  },
 ];
 
 // Get categories and their icons
