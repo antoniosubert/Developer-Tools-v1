@@ -23,13 +23,13 @@ export async function POST(request: Request) {
         latency,
         status: response.status,
       });
-    } catch (error) {
+    } catch (_error) {
       return NextResponse.json(
         { error: "Failed to reach the URL" },
         { status: 500 }
       );
     }
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
       { error: "Invalid request format" },
       { status: 400 }
