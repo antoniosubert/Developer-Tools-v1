@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
 
 interface Tool {
   name: string;
@@ -223,6 +224,14 @@ export const tools: Tool[] = [
     path: "/tools/data-generator",
     category: "Development",
   },
+  {
+    name: "Circle of Fifths",
+    description:
+      "Explore musical scales and their relationships in the circle of fifths",
+    icon: "🎼",
+    path: "/tools/circle-of-fifths",
+    category: "Music",
+  },
 ];
 
 // Get categories and their icons
@@ -254,6 +263,22 @@ export function ToolsMenu({
   expandedCategories,
   onToggleCategory,
 }: ToolsMenuProps) {
+  const [activeTab, setActiveTab] = useState<string>("all");
+
+  useEffect(() => {
+    // Load the last active tab from localStorage
+    const savedTab = localStorage.getItem("activeToolsTab");
+    if (savedTab) {
+      setActiveTab(savedTab);
+    }
+  }, []);
+
+  const handleTabChange = (value: string) => {
+    setActiveTab(value);
+    // Save the active tab to localStorage
+    localStorage.setItem("activeToolsTab", value);
+  };
+
   const toolsByCategory = tools.reduce((acc, tool) => {
     if (!acc[tool.category]) {
       acc[tool.category] = [];
@@ -268,7 +293,7 @@ export function ToolsMenu({
   );
 
   return (
-    <Tabs defaultValue="recommended" className="w-full">
+    <Tabs defaultValue={activeTab} onValueChange={handleTabChange}>
       <TabsList className="w-full justify-center mb-6 overflow-x-auto flex-wrap gap-2 h-auto py-2 px-4">
         <TabsTrigger
           value="recommended"
