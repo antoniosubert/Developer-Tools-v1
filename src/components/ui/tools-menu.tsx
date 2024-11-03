@@ -214,6 +214,14 @@ export const tools: Tool[] = [
     path: "/tools/pdf-merger",
     category: "Document",
   },
+  {
+    name: "Data Generator",
+    description:
+      "Generate sample data with custom fields and export as JSON/CSV",
+    icon: "📊",
+    path: "/tools/data-generator",
+    category: "Development",
+  },
 ];
 
 // Get categories and their icons
