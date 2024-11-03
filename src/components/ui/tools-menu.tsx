@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 interface Tool {
   name: string;
@@ -235,7 +236,19 @@ const categoryIcons: Record<string, string> = {
   Text: "📝",
   Network: "🌐",
   Finance: "💰",
+  Music: "🎵",
+  Document: "📄",
 };
+
+// Add recommended tools array
+const recommendedTools = [
+  "/tools/json-formatter",
+  "/tools/password-generator",
+  "/tools/color-contrast",
+  "/tools/markdown-previewer",
+  "/tools/base64",
+  "/tools/unit-converter",
+];
 
 export function ToolsMenu({
   expandedCategories,
@@ -249,47 +262,64 @@ export function ToolsMenu({
     return acc;
   }, {} as Record<string, Tool[]>);
 
-  return (
-    <div className="space-y-4">
-      {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
-        <div key={category} className="border rounded-lg overflow-hidden">
-          <button
-            onClick={() => onToggleCategory(category)}
-            className="w-full p-4 flex items-center justify-between bg-secondary/50 hover:bg-secondary/70 transition-colors"
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-2xl">
-                {categoryIcons[category] || "🔧"}
-              </span>
-              <h2 className="text-xl font-semibold">{category}</h2>
-              <span className="text-sm text-muted-foreground">
-                ({categoryTools.length} tools)
-              </span>
-            </div>
-            <ChevronDown
-              className={`w-5 h-5 transition-transform ${
-                expandedCategories.includes(category) ? "rotate-180" : ""
-              }`}
-            />
-          </button>
+  // Filter recommended tools
+  const recommended = tools.filter((tool) =>
+    recommendedTools.includes(tool.path)
+  );
 
-          {expandedCategories.includes(category) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-              {categoryTools.map((tool) => (
-                <Link href={tool.path} key={tool.name}>
-                  <div className="p-6 border rounded-lg bg-card hover:bg-accent/50 transition-colors cursor-pointer h-full">
-                    <div className="text-2xl mb-2">{tool.icon}</div>
-                    <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {tool.description}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
+  return (
+    <Tabs defaultValue="recommended" className="w-full">
+      <TabsList className="w-full justify-center mb-6 overflow-x-auto flex-wrap gap-2 h-auto py-2 px-4">
+        <TabsTrigger
+          value="recommended"
+          className="min-w-[140px] flex-shrink-0"
+        >
+          ⭐ Recommended
+        </TabsTrigger>
+        {Object.keys(toolsByCategory).map((category) => (
+          <TabsTrigger
+            key={category}
+            value={category}
+            className="min-w-[140px] flex-shrink-0"
+          >
+            {categoryIcons[category]} {category}
+          </TabsTrigger>
+        ))}
+      </TabsList>
+
+      <TabsContent value="recommended">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {recommended.map((tool) => (
+            <Link href={tool.path} key={tool.name}>
+              <div className="p-6 border rounded-lg bg-card hover:bg-accent/50 transition-colors cursor-pointer h-full">
+                <div className="text-2xl mb-2">{tool.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {tool.description}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
+      </TabsContent>
+
+      {Object.entries(toolsByCategory).map(([category, categoryTools]) => (
+        <TabsContent key={category} value={category}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {categoryTools.map((tool) => (
+              <Link href={tool.path} key={tool.name}>
+                <div className="p-6 border rounded-lg bg-card hover:bg-accent/50 transition-colors cursor-pointer h-full">
+                  <div className="text-2xl mb-2">{tool.icon}</div>
+                  <h3 className="text-lg font-semibold mb-2">{tool.name}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {tool.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </TabsContent>
       ))}
-    </div>
+    </Tabs>
   );
 }
