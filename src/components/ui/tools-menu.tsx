@@ -193,6 +193,20 @@ export const tools: Tool[] = [
     path: "/tools/api-request-builder",
     category: "Development",
   },
+  {
+    name: "Metronome",
+    description: "A simple metronome for keeping time while practicing music",
+    icon: "🎵",
+    path: "/tools/metronome",
+    category: "Music",
+  },
+  {
+    name: "Chord Finder",
+    description: "Find guitar and piano chord shapes",
+    icon: "🎸",
+    path: "/tools/chord-finder",
+    category: "Music",
+  },
 ];
 
 // Get categories and their icons
