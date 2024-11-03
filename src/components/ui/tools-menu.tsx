@@ -207,6 +207,13 @@ export const tools: Tool[] = [
     path: "/tools/chord-finder",
     category: "Music",
   },
+  {
+    name: "PDF Merger",
+    description: "Merge multiple PDF files into a single document",
+    icon: "📄",
+    path: "/tools/pdf-merger",
+    category: "Document",
+  },
 ];
 
 // Get categories and their icons
